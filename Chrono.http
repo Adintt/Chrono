@@ -1,0 +1,53 @@
+@Chrono_HostAddress = http://localhost:5294
+
+### GET all tasks (simple)
+GET http://localhost:5000/tasks
+Accept: application/json
+
+### GET all tasks with times (expanded)
+GET http://localhost:5000/tasks?expanded=times
+Accept: application/json
+
+### POST new task
+POST http://localhost:5000/tasks
+Content-Type: application/json
+
+{
+  "name": "Nueva tarea de ejemplo",
+  "description": "Descripción de la tarea",
+  "customer": "Cliente Ejemplo"
+}
+
+### DELETE a task by ID
+DELETE http://localhost:5000/tasks/{{taskId}}
+Accept: application/json
+
+### GET times for a task
+GET http://localhost:5000/tasks/{{taskId}}/times
+Accept: application/json
+
+### POST a new time entry for a task
+POST http://localhost:5000/tasks/{{taskId}}/times
+Content-Type: application/json
+
+{
+  "description": "Trabajo realizado",
+  "beginDate": "2025-07-14T08:00:00Z",
+  "endDate": "2025-07-14T10:30:00Z"
+}
+
+### PUT update a time entry
+PUT http://localhost:5000/tasks/{{taskId}}/times/{{timeId}}
+Content-Type: application/json
+
+{
+  "description": "Trabajo actualizado",
+  "beginDate": "2025-07-14T08:00:00Z",
+  "endDate": "2025-07-14T11:00:00Z"
+}
+
+### DELETE a time entry
+DELETE http://localhost:5000/tasks/{{taskId}}/times/{{timeId}}
+Accept: application/json
+
+###

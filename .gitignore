@@ -1,0 +1,58 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# Logs
+*.log
+
+# LocalDB database files (if any)
+*.mdf
+*.ldf
+
+# User-specific files
+*.userprefs
+
+# Resharper
+_ReSharper*/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of PackageReference
+# If you have packages.config uncomment below
+# packages/
+
+# Publish output
+publish/
+
+# Docker
+docker-compose.override.yml
+
+# Entity Framework Migrations
+Migrations/
+
+# Rider IDE files (if you use JetBrains Rider)
+.idea/
+
+# ASP.NET Core runtime config files
+*.runtimeconfig.json
+
+# Visual Studio Code workspace settings
+.vscode/
+
+# Others
+*.vspscc
+*.vssscc
+
+# Environment variables file
+.env
+
+# User secrets (if using ASP.NET Core Secret Manager)
+secrets.json
+
